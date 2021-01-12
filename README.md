@@ -8,9 +8,9 @@ Clone o projeto em sua máquina com o seguinte comando:
 git clone https://github.com/IgorTaconiMatos/web-crawling-nerdstore.git
 ```
 ## Pré-requisitos
-Para você rodar o software é necessário tem instalado em sua máquina o `Python3.x.` e o `scrapy`  
-Após ter clonado o repositório, entre na pasta no diretório em que ele está contido e execute o código abaixo para instalar as bibliotecas.
-```
+Para você rodar o software é necessário tem instalado em sua máquina o `Python3.x.` e o `scrapy`.  
+Para instalar o `scrapy` digite o seguinte comando no terminal:
+ ```
 pip install scrapy
 ```
 ## Executar
