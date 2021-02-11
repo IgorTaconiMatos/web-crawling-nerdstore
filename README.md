@@ -21,7 +21,7 @@ python -m venv .venv
 ```
 source .venv/bin/activate
 ```
-### Para instalar o `Scrapy`
+## Para instalar o `Scrapy`
 Com o virtualenv já criado e ativado (ou não), basta instalar o Scrapy.
  ```
 pip install Scrapy==2.4.1
