@@ -5,7 +5,7 @@ from ..items import NerdStoreItem
 
 class NerdStoreSpider(CrawlSpider):
 	name = 'nerdstore'
-	allowed_domains = ['nerdstore.com.br']	
+	allowed_domains = ['nerdstore.com.br']
 	start_urls = ['https://nerdstore.com.br/']
 
 	rules = (
@@ -36,6 +36,9 @@ class NerdStoreSpider(CrawlSpider):
 		price = response.xpath(
 			'//bdi/text()'
 		).get()
+		images = ' - '.join(response.css(
+			'.woocommerce-product-gallery__image a::attr(href)'
+		).getall())
 		description = ' '.join(response.xpath(
 			'//div[@class="single-product__description__content"]//p//text()'
 		).getall())
@@ -43,8 +46,9 @@ class NerdStoreSpider(CrawlSpider):
 			'//div[@class="single-product__description__content"]//ul//li//text()'
 		).getall())
 
-		items['name'] = name 
+		items['name'] = name
 		items['price'] = price
+		items['images'] = images
 		items['description'] = description
 		items['specifications'] = specifications
 		items['url'] = response.url

@@ -25,20 +25,22 @@ class NerdStorePipeline:
 			CREATE TABLE products(
 				name TEXT,
 				price INTEGER,
+				images TEXT,
 				description TEXT,
 				specifications TEXT,
-				url TEXT
+				url TEXT UNIQUE
 			)
 		"""
 		self.cur.execute(sql)
 
 	def db_insert(self, item):
 		self.cur.execute("""
-			INSERT INTO products(name, price, description, specifications, url)
-				VALUES('{}', '{}', '{}', '{}', '{}')
+			INSERT INTO products(name, price, images, description, specifications, url)
+				VALUES('{}', '{}', '{}', '{}', '{}', '{}')
 			""".format(
 			item['name'],
 			item['price'],
+			item['images'],
 			item['description'],
 			item['specifications'],
 			item['url']

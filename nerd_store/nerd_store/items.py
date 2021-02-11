@@ -10,6 +10,7 @@ class NerdStoreItem(scrapy.Item):
 	# define the fields for your item here like:
 	name = scrapy.Field()
 	price = scrapy.Field()
+	images = scrapy.Field()
 	description = scrapy.Field()
 	specifications = scrapy.Field()
 	url = scrapy.Field()
