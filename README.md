@@ -8,7 +8,7 @@ Para você rodar o software é necessário tem instalado em sua máquina o `Pyth
 ## Começando
 Clone o projeto em sua máquina com o seguinte comando:
 ```
-git clone https://github.com/igor-taconi/web-crawling-nerdstore.git
+git clone https://github.com/taconi/web-crawling-nerdstore.git
 ```
 ## Virtualenv
 Recomendo não instalar nada em sua máquina e criar uma virtualenv para não quebrar algum possível projeto. Mas, fique a fontade.
